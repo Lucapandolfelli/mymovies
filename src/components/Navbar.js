@@ -6,16 +6,13 @@ export default function Navbar() {
         <nav>
             <div className='navbar-brand'>
                 <Router>
-                    <Link>MyMovies</Link>
+                    <Link to='/'>MyMovies</Link>
                 </Router>
             </div>
             <ul className='navbar'>
                 <Router>
                     <li className='navbar-item'>
-                        <Link to=''>Home</Link>
-                    </li>
-                    <li className='navbar-item'>
-                        <Link to=''>Movie</Link>
+                        <Link to='/'>Home</Link>
                     </li>
                 </Router>
             </ul>           

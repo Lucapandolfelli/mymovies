@@ -16,9 +16,19 @@ export default function SingleMovie() {
         return null;
     }
 
+    const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
     return (
         <div>
-            <h1>SingleMovie</h1>
+            <img src={imageUrl} alt={movie.title} />
+            <div>
+                <h1>{movie.title}</h1>
+                <p>{movie.overview}</p>
+                <ul>
+                    {movie.genres.map((genre) => (
+                        <li>{genre.name}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
-    )
+    );
 }

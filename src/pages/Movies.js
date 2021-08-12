@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import MovieCard from './MovieCard';
+import MovieCard from '../components/MovieCard';
 import { get } from '../utils/api';
 
 export default function Movies() {
@@ -7,6 +7,7 @@ export default function Movies() {
 
     useEffect(() => {
         get("/discover/movie").then((data) => {
+            console.log(data.results)
             setMovies(data.results);
         });
     }, []);
